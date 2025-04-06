@@ -1,0 +1,195 @@
+
+body {
+    
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.contenedor {
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor ocupa toda la pantalla */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+        "menulateral menusuperior menusuperior menusuperior menusuperior menusuperior"
+        
+        "menulateral contenido  contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido"
+        "menulateral contenido contenido contenido contenido contenido";
+}
+
+.Logo{
+    margin-bottom: 25%;
+    color: rgb(24, 129, 170);
+    
+}
+
+.menusuperior {
+    grid-area: menusuperior;
+    margin-top: 20px;
+    border-radius: 7px;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.menulateral {
+    padding: 50px;
+    grid-area: menulateral;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 7px;
+    color: rgb(201, 199, 197)!important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+}
+.Abajo{
+    margin-top: 120%;
+}
+
+
+.contenido {
+    grid-area: contenido;
+}
+
+
+a{
+    text-decoration: none !important;
+    color:  rgb(110, 109, 109) !important;
+    font-weight: 500 !important;
+}
+a:hover{
+    text-decoration: none !important;
+    color:  rgb(24, 129, 170) !important;
+    font-weight: 500 !important;
+}
+
+
+
+/*-------------------------- Estilos para la barra de búsqueda con icono -------------------------------------*/
+
+.search-container {
+    position: relative;
+    width: 400px;
+}
+
+.search-box {
+    width: 100%;
+    border: 1px solid #a19c9c;
+    border-radius: 5px;
+    text-align: center;
+  
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.resumeninventario{
+
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 20%;
+    justify-content: space-between;
+}
+.secciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.productos{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 800px !important;
+}
+.categoria,.productostotales,.lowstock,.outstock{
+    font-size: 8px !important;
+    height: 100px; /* Ajusta la altura del contenedor */
+
+}
+
+.categoria{
+    color:  rgb(24, 129, 170) !important;
+    width: 20%;
+   margin-left: 20px;
+   border-right: 3px solid rgb(214, 212, 212); 
+
+
+}
+.productostotales{
+    color:  rgb(247, 154, 79) !important;
+    width: 20%;
+    border-right: 3px solid rgb(214, 212, 212); 
+
+}
+.lowstock{
+    color:  rgb(145, 144, 89) !important;
+    font-weight: bold;
+    border-right: 3px solid rgb(214, 212, 212); 
+
+    width: 20%;
+
+}
+.outstock{
+    color:  rgb(247, 79, 79) !important;
+    width: 20%;
+
+
+}
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.Agregar{
+    color: white !important;
+   width: 9%;
+   margin-right: 10px;
+}
+#filterButton,#download{
+    color: rgb(78, 77, 77) !important;
+    background-color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+    width: 9%;
+    margin-right: 10px;
+}
+#product-detail-view{
+    display: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 96.5%;
+}
