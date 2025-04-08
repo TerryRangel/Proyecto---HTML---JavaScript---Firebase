@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc,updateDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-// Configuración de Firebase
+// Configuración de Firebase/////////////////////////////////////////////////////////////////////////
 const firebaseConfig = {
     apiKey: "AIzaSyA2Wz_A6mJTAAw9skqZTOAuyf_bGECdEqc",
     authDomain: "proyecto-tlgd.firebaseapp.com",
@@ -14,10 +14,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let editingProductId = null;
 
 
-// Mostrar alerta visual con Bootstrap
+// Mostrar alerta visual con Bootstrap////////////////////////////////////////////////////////////////////////////////
 function showAlert(message, type = "success") {
     const alertContainer = document.getElementById("alert-container");
     const alertElement = document.createElement("div");
@@ -36,6 +37,7 @@ function showAlert(message, type = "success") {
         bsAlert.close();
     }, 3000);
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Verificar si el ID ya existe
 async function isProductIdUsed(productId) {
@@ -49,7 +51,9 @@ async function isProductIdUsed(productId) {
     return false;
 }
 
-// Añadir producto
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////// Añadir producto/////////////////////////////////////////////////////////////////
 async function addProduct(product) {
     try {
         await addDoc(collection(db, "products"), product);
@@ -60,8 +64,9 @@ async function addProduct(product) {
         showAlert("Error al agregar producto", "danger");
     }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Obtener productos y calcular el total de productos y dinero total
+///////////////////// Obtener productos y calcular el total de productos y dinero total//////////////////////////////////////////////////////////////
 async function fetchProducts() {
     const querySnapshot = await getDocs(collection(db, "products"));
     const tbody = document.querySelector("tbody");
@@ -186,8 +191,6 @@ async function fetchProducts() {
             }
         });
     });
-    // Al final de fetchProducts(), después de los delete-btn...
-// Dentro del event listener del botón ".edit-btn" en fetchProducts()
 document.querySelectorAll(".edit-btn").forEach((button) => {
     button.addEventListener("click", async function () {
       const row = this.closest("tr");
@@ -290,7 +293,7 @@ document.querySelectorAll(".edit-btn").forEach((button) => {
 
      
   
-      // Listener para el botón de volver
+      //////////////////// Listener para el botón de volver////////////////////////////////////////////////////////////////////////////
       document.getElementById("backToList").addEventListener("click", () => {
         detailView.innerHTML = "";
         detailView.style.display = "none";
@@ -298,9 +301,7 @@ document.querySelectorAll(".edit-btn").forEach((button) => {
         fetchProducts();
       });
   
-      // ---- NUEVO: Listener para el botón con id "Edit" dentro del detalle ----
       document.getElementById("Edit").addEventListener("click", () => {
-        // Configurar el modal en modo "Editar" usando productData ya obtenido
         editingProductId = productId;
         document.getElementById("addProductModalLabel").innerText = "Edit Product";
         document.querySelector("#addProductModal .btn-primary").innerText = "Save Changes";
@@ -328,7 +329,6 @@ document.querySelectorAll(".edit-btn").forEach((button) => {
         const modalInstance = new bootstrap.Modal(addProductModalEl);
         modalInstance.show();
       });
-      // ---- FIN NUEVO ----
     });
 });
 
@@ -339,7 +339,7 @@ document.querySelectorAll(".edit-btn").forEach((button) => {
 }
 
 
-// Eliminar producto
+// ////////////////////////Eliminar producto///////////////////////////////////////////////////
 async function deleteProduct(productId) {
     try {
         await deleteDoc(doc(db, "products", productId));
@@ -352,7 +352,6 @@ async function deleteProduct(productId) {
 }
 
 // Añadir producto desde formulario modal (con verificación de ID)
-// Listener para el botón del modal (se distingue entre agregar y editar)
 document.querySelector("#addProductModal .btn-primary").addEventListener("click", async () => {
     // Recolectar datos del formulario
     const product = {
@@ -401,7 +400,7 @@ function updateImagePreview() {
     }
 }
 
-// Filtrar productos por nombre
+// Filtrar productos por nombre//////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-box');
     const tableBody = document.querySelector('tbody');
@@ -442,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Función para actualizar producto
+// ////////////////////////////////////////Función para actualizar producto////////////////////////////////
 async function updateProduct(productId, updatedData) {
     try {
         const productRef = doc(db, "products", productId);
@@ -459,7 +458,7 @@ async function updateProduct(productId, updatedData) {
     }
 }
 
-// Función para resetear el modal a modo "Agregar Producto"
+// /////////////////////////Función para resetear el modal a modo "Agregar Producto"//////////////////////////////////////////////
 function resetModalToAdd() {
     document.getElementById("addProductModalLabel").innerText = "New Product";
     document.querySelector("#addProductModal .btn-primary").innerText = "Add Product";
@@ -467,6 +466,16 @@ function resetModalToAdd() {
     document.getElementById("imagePreview").style.display = "none";
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const openAddModalBtn = document.getElementById("openAddProductModal");
+
+    openAddModalBtn.addEventListener("click", () => {
+        // Limpiar los campos
+        resetModalToAdd();
+        editingProductId = null;
+    });
+});
 
 
 
