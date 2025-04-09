@@ -10,11 +10,12 @@
   
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1055;"></div>
 
@@ -22,10 +23,11 @@
     <div class="menusuperior bg-white">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+
           <!-- Barra de búsqueda con lupa -->
           <div class="search-container">
             <i class="bi bi-search search-icon"></i>
-            <input class="form-control me-2 search-box" type="search" placeholder="Search product, supplier, order">
+            <input class="form-control me-2 ps-5 search-box" type="search" placeholder="Search product, supplier, order">
           </div>
 
           <div class="d-flex align-items-center">
@@ -38,143 +40,147 @@
 
     <div class="menulateral bg-white">
       <nav class="sidebar vh-100">
-        <h4 class="Logo">
-          <img src="Logo.jpg" width="70" alt="Logo"> KANBAN
+        <h4 class="Logo mb-5">
+          <img src="Logo.jpg" width="50" alt="Logo"> KANBAN
         </h4>
 
         <ul class="Arriba nav flex-column">
-          <li class="nav-item mb-3">
+          <li class="nav-item mb-4">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=OXVih02dFZ53&format=png&color=000000" width="50" alt="Dashboard">
+              <img src="https://img.icons8.com/?size=100&id=OXVih02dFZ53&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Dashboard">
               Dashboard
             </a>
           </li>
-          <li class="mb-3">
+          <li class="mb-4">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=yiocPQvsmZ9M&format=png&color=000000" width="50" alt="Inventory">
+              <img src="https://img.icons8.com/?size=100&id=yiocPQvsmZ9M&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Inventory">
               Inventory
             </a>
           </li>
-          <li class="mb-3">
+          <li class="mb-4">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=Okfcz56sHAOr&format=png&color=000000" width="50" alt="Reports">
+              <img src="https://img.icons8.com/?size=100&id=Okfcz56sHAOr&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Reports">
               Reports
             </a>
           </li>
-          <li class="mb-3">
+          <li class="mb-4">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=15263&format=png&color=000000" width="50" alt="Suppliers">
+              <img src="https://img.icons8.com/?size=100&id=15263&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Suppliers">
               Suppliers
             </a>
           </li>
-          <li class="mb-3">
+          <li class="mb-4">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=B3MuDMgb9AEx&format=png&color=000000" width="50" alt="Orders">
+              <img src="https://img.icons8.com/?size=100&id=B3MuDMgb9AEx&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Orders">
               Orders
             </a>
           </li>
           <li class="mb-5">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=Fou9ZGY6YvVM&format=png&color=000000" width="50" alt="Manage Store">
+              <img src="https://img.icons8.com/?size=100&id=Fou9ZGY6YvVM&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Manage Store">
               Manage Store
             </a>
           </li>
         </ul>
 
         <ul class="Abajo nav flex-column">
-          <li>
+          <li class="mb-4">
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=ybfklM8wYSX1&format=png&color=000000" width="50" alt="Settings">
+              <img src="https://img.icons8.com/?size=100&id=ybfklM8wYSX1&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Settings">
               Settings
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="https://img.icons8.com/?size=100&id=j8vtslxN0LJo&format=png&color=000000" width="50" alt="Logout">
+              <img src="https://img.icons8.com/?size=100&id=j8vtslxN0LJo&format=png&color=000000" width="30" class="me-2 icono-gris" alt="Logout">
               Logout
             </a>
           </li>
         </ul>
       </nav>
     </div>
+
     <div  id="contenido" class="contenido">
 
       <div id="product-detail-view"></div>
 
-
       <div id="product-list-view">
+        <div class="resumeninventario">
+          <h5>Overall Inventory</h5><br>
 
-      
-      <div class="resumeninventario">
-        <h5>Overall Inventory</h5>
+          <div class="secciones">
+            <div class="categoria">
+              <h5>Categories</h5>
+            </div>
 
-        <div class="secciones">
-          <div class="categoria">
-            <h5>Categories</h5>
-          </div>
-          <div class="productostotales">
-            <h5>Total Products</h5>
-          </div>
-          <div class="lowstock">
-            <h5>Low Stock</h5>
-          </div>
-          <div class="outstock">
-            <h5>Out of Stock</h5>
+            <div class="productostotales">
+              <h5>Total Products</h5>
+            </div>
+
+            <div class="lowstock">
+              <h5>Low Stock</h5>
+            </div>
+
+            <div class="outstock">
+              <h5>Out of Stock</h5>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="product-list-view" class="productos">
-        <div class="encabezado d-flex justify-content-between align-items-center">
-          <h3>Products</h3>
-          <!-- Botón para abrir el modal -->
-           <div class="w-100 d-flex justify-content-end align-items-center">
+        <div id="product-list-view" class="productos">
+          <div class="encabezado d-flex justify-content-between align-items-center">
+            <h3>Products</h3>
+            <!-- Botón para abrir el modal -->
+            <div class="w-100 d-flex justify-content-end align-items-center">
               <button id="openAddProductModal" class="btn btn-primary Agregar" data-bs-toggle="modal" data-bs-target="#addProductModal">Add Product</button>
-          <button class="btn btn-secondary" id="filterButton">Filters</button>
-          <button class="btn btn-secondary" id="download">Download</button>
-           </div>
+              <button class="btn btn-secondary" id="filterButton">
+                <i class="fa fa-sliders me-2" aria-hidden="true"></i>
+                Filters
+              </button>
+              <button class="btn btn-secondary" id="download">Download all</button>
+            </div>
+          </div>
+
+          <style>
+            .table-wrapper 
+            {
+              max-height: 450px;
+              overflow-y: auto;
+              display: block;
+            }
+          
+            .table thead th 
+            {
+              position: sticky;
+              top: 0;
+              background: white; 
+              z-index: 1;
+            }
+          </style>
         
+          <div class="table-wrapper">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Products</th>
+                  <th>Buying Price</th>
+                  <th>Quantity</th>
+                  <th>Threshold Value</th>
+                  <th>Expiry Date</th>
+                  <th>Availability</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <!-- Aquí se agregarán los productos dinámicamente -->
+              </tbody>
+            </table>
+          </div>
+        
+          <div id="product-detail-view" class="container mt-4"></div>
+
         </div>
-
-        <style>
-          .table-wrapper {
-            max-height: 700px;
-            overflow-y: auto;
-            display: block;
-          }
-        
-          .table thead th {
-            position: sticky;
-            top: 0;
-            background: white; /* o el color de fondo que uses */
-            z-index: 1;
-          }
-        </style>
-        
-        <div class="table-wrapper">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Products</th>
-                <th>Buying Price</th>
-                <th>Quantity</th>
-                <th>Threshold Value</th>
-                <th>Expiry Date</th>
-                <th>Availability</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="table-body">
-              <!-- Aquí se agregarán los productos dinámicamente -->
-            </tbody>
-          </table>
-        </div>
-        
-
-        <div id="product-detail-view" class="container mt-4"></div>
-
       </div>
-    </div>
     </div>
   </div>
 
@@ -188,6 +194,7 @@
           <h5 class="modal-title" id="addProductModalLabel">New Product</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+
         <div class="modal-body">
           <form>
             <div class="mb-3">
@@ -195,17 +202,21 @@
               <input type="url" class="form-control" id="productImageUrl" placeholder="Enter image URL">
 
             </div>
+
             <div class="mb-3 text-center">
               <img id="imagePreview" src="" alt="Image Preview" class="img-fluid" style="max-height: 200px; display: none;">
             </div>
+
             <div class="mb-3">
               <label for="productName" class="form-label">Product Name</label>
               <input type="text" class="form-control" id="productName">
             </div>
+
             <div class="mb-3">
               <label for="productID" class="form-label">Product ID</label>
               <input type="text" class="form-control" id="productID">
             </div>
+
             <div class="mb-3">
               <label for="category" class="form-label">Category</label>
               <select class="form-select" id="category">
@@ -214,17 +225,19 @@
                 <option value="Cleaning">Household Cleaning</option>
                 <option value="food">Food</option>
                 <option value="alcoholicBeverages">Alcoholic Beverages</option>
-
               </select>
             </div>
+
             <div class="mb-3">
               <label for="buyingPrice" class="form-label">Buying Price</label>
               <input type="number" class="form-control" id="buyingPrice">
             </div>
+
             <div class="mb-3">
               <label for="quantity" class="form-label">Quantity</label>
               <input type="number" class="form-control" id="quantity">
             </div>
+
             <div class="mb-3">
               <label for="unit" class="form-label">Unit</label>
               <input type="text" class="form-control" id="unit">
@@ -241,6 +254,7 @@
             </div>
           </form>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
           <button type="button" class="btn btn-primary">Add Product</button>
@@ -249,7 +263,7 @@
     </div>
   </div>
   
-    <!-- -----------------------------------------------Modal ----------------------------------------------------------------------------------------->
+<!-- -----------------------------------------------Modal ----------------------------------------------------------------------------------------->
   
   <!-- Bootstrap JS Bundle (incluye Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

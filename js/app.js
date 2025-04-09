@@ -90,23 +90,21 @@ async function fetchProducts() {
             </tr>
         `;
         totalProductsContainer.innerHTML = `
-            <h5>Total Products: 0</h5>
-            <h5>Total Money: $0.00</h5>
+            <h5>Total Products</h5><br>
+            <h6>0</h6>
         `;
         totalCategoriasContainer.innerHTML = `
             <h5>Categories</h5><br>
-            <h5>0</h5>
+            <h6>0</h6>
         `;
         outOfStockContainer.innerHTML = `
             <h5>Out of Stock</h5><br>
-            <h5>0</h5>
+            <h6>0</h6>
         `;
         lowstockContainer.innerHTML = `
             <h5>Low Stock</h5><br>
-            <h5>0</h5>
+            <h6>0</h6
         `;
-
-
 
         return;
     }
@@ -269,7 +267,7 @@ document.querySelectorAll(".edit-btn").forEach((button) => {
              src="${productData.imageUrl || 'image.png'}"
              alt="${productData.name}"
               style="
-    width: 500px;
+    width: 450px;
     height: auto;
     border: 2px solid #ccc;
     border-radius: 40px;
@@ -282,7 +280,7 @@ document.querySelectorAll(".edit-btn").forEach((button) => {
        </div>
   
        <!-- Botón volver -->
-       <br><br><br><br><br><br>
+       
        <button  onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';"
              onmouseout="this.style.backgroundColor=''; this.style.color='';" style="color: rgb(78, 77, 77) !important;
                     background-color: rgb(255, 255, 255) !important;
