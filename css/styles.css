@@ -62,7 +62,11 @@ body
 
 .Abajo
 {
+<<<<<<< HEAD
     margin-top: 90%;
+=======
+    margin-top: 120%;
+>>>>>>> aca2bd3 (Diseño)
 }
 
 
@@ -115,7 +119,11 @@ a:hover
 
 .resumeninventario
 {
+<<<<<<< HEAD
     margin-top: 10px;
+=======
+    margin-top: 20px;
+>>>>>>> aca2bd3 (Diseño)
     margin-left: 20px;
     margin-right: 20px;
     padding: 20px;
@@ -136,7 +144,11 @@ a:hover
 
 .productos
 {
+<<<<<<< HEAD
     margin-top: 15px;
+=======
+    margin-top: 20px;
+>>>>>>> aca2bd3 (Diseño)
     margin-left: 20px;
     margin-right: 20px;
     padding: 20px;

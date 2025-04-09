@@ -90,8 +90,13 @@ async function fetchProducts() {
             </tr>
         `;
         totalProductsContainer.innerHTML = `
+<<<<<<< HEAD
             <h5>Total Products</h5><br>
             <h6>0</h6>
+=======
+            <h5>Total Products: 0</h5><br>
+            <h6>Total Money: $0.00</h6>
+>>>>>>> aca2bd3 (Diseño)
         `;
         totalCategoriasContainer.innerHTML = `
             <h5>Categories</h5><br>
@@ -157,27 +162,27 @@ async function fetchProducts() {
     });
 
     totalProductsContainer.innerHTML = `
-        <h5>Total Products</h5>
+        <h5>Total Products</h5><br>
 
-        <h5 style="color:black" >
-  <span>${totalQuantity}</span>
-  <span style="margin-left: 55px;">$${totalPrice.toFixed(2)}</span>
-</h5>
+        <h6 style="color:black" >
+            <span>${totalQuantity}</span>
+            <span style="margin-left: 55px;">$${totalPrice.toFixed(2)}</span>
+        </h6>
 
     `;
 
     totalCategoriasContainer.innerHTML = `
         <h5>Categories</h5><br>
-        <h5 style="color:black">${totalCategories.size}</h5>
+        <h6 style="color:black">${totalCategories.size}</h6>
     `;
 
     outOfStockContainer.innerHTML = `
-        <h5>Out of Stock</h5>
-        <h5 style="color:black">${outOfStockCount}</h5>
+        <h5>Out of Stock</h5><br>
+        <h6 style="color:black">${outOfStockCount}</h6>
     `;
     lowstockContainer.innerHTML = `
-        <h5>Low Stock</h5>
-        <h5 style="color:black">${lowStockCount}</h5>
+        <h5>Low Stock</h5><br>
+        <h6 style="color:black">${lowStockCount}</h6>
     `;
 
     document.querySelectorAll(".delete-btn").forEach((button) => {
